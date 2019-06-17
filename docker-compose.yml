@@ -1,0 +1,9 @@
+# docker-compose.yml: use for local docker orchestration.
+version: "3"
+services:
+  mb:
+    build: .
+    command: mb --allowCORS --allowInjection --mock
+    ports:
+      - "2525:2525"
+      - "4545:4545"
